@@ -1,3 +1,5 @@
+import type { SonyRegion } from "../types/firmware";
+
 export enum PSN_MANIFEST_URLS {
     "BR" = `http://fbr01.ps5.update.playstation.net/update/ps5/official/tJMRE80IbXnE9YuG0jzTXgKEjIMoabr6/list/br/updatelist.xml`,
     "US" = `http://fus01.ps5.update.playstation.net/update/ps5/official/tJMRE80IbXnE9YuG0jzTXgKEjIMoabr6/list/us/updatelist.xml`,
@@ -12,6 +14,10 @@ export enum PSN_MANIFEST_URLS {
     "RU" = `http://fru01.ps5.update.playstation.net/update/ps5/official/tJMRE80IbXnE9YuG0jzTXgKEjIMoabr6/list/ru/updatelist.xml`,
     "CN" = `http://fcn01.ps5.update.playstation.net/update/ps5/official/tJMRE80IbXnE9YuG0jzTXgKEjIMoabr6/list/cn/updatelist.xml`,
     "HK" = `http://fhk01.ps5.update.playstation.net/update/ps5/official/tJMRE80IbXnE9YuG0jzTXgKEjIMoabr6/list/hk/updatelist.xml`,
+};
+
+export interface SonyUpdateDataList {
+    region: SonyRegion
 };
 
 export type Region = keyof typeof PSN_MANIFEST_URLS;
